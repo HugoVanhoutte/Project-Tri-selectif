@@ -1,0 +1,127 @@
+/* RESET CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*FIN RESET CSS*/
+/*CALIBRAGE PX/REM*/
+html {
+    font-size: 62.5%;
+}
+
+/*FIN CALIBRAGE PX/REM*/
+:root {
+    --primary-color: #106900;
+    --color-yellow: #E0D42B;
+    --color-green: #0B2E13;
+    --color-blue: #16193D;
+    --color-brown: #69471E;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+#container {
+    font-family: "Lato", sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+}
+
+    #container .content {
+        width: 98%;
+        margin: .15rem;
+        border: .5px black solid;
+        border-radius: 3px;
+        background-color: green;
+    }
+
+    #container header {
+        height: 10%;
+    }
+
+    #container #game {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        #container #game .game-content {
+            width: 99%;
+            height: 50%;
+            border: .5px solid black;
+            background-color: #2bab2b;
+            margin: .05rem;
+            border-radius: 3px
+        }
+
+        #container #game #list {
+
+        }
+
+
+        #container #game #trashcans {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+            #yellow-trash {
+                color: var(--color-yellow);
+            }
+            #green-trash {
+                color: var(--color-green);
+            }
+            #blue-trash {
+                color: var(--color-blue);
+            }
+            #brown-trash {
+                color: var(--color-brown);
+            }
