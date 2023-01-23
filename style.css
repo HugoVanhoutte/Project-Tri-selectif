@@ -125,3 +125,8 @@ body{
             #brown-trash {
                 color: var(--color-brown);
             }
+
+            li {
+                display: block;
+                width: fit-content;
+            }
