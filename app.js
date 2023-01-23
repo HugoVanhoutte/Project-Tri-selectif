@@ -1,4 +1,4 @@
-const trashListFile = `[
+const trashList = `[
     "bouteille en plastique",
     "flacon de gel douche",
     "flacon de produit lave-vitres",
@@ -23,25 +23,22 @@ const trashListFile = `[
 
     "reste de repas",
     "couche-culotte",
-    "pot de yaourt",
-    "préservatif (usagé)"
-   
+    "pot de yaourt"
+
 ]`
 
-let trashList = JSON.parse(trashListFile);
-
-const getRandom = () => {
-    let randomizedList = [];
-    for (let i = 0; i < 10; i++) {
-        randomizedList[i] = trashList[Math.floor(Math.random()*trashList.length)];
-    }
-    return randomizedList;
+let getRandomTrash = (array) => {
+    return array[Math.floor(Math.random()*array.length)];
 }
 
-const list = document.querySelector('ul');
+const listDisplay = document.getElementById("list");
 
-for (let i = 0; i < 10; i++) {
+//TODO drag and drop and check
+for (let i = 0; i <= 10; i++) {
     let listElement = document.createElement("li");
-    listElement.innerText = getRandom()[i];
-    list.append(listElement);
+    listElement.innerText = getRandomTrash(JSON.parse(trashList));
+    listDisplay.append(listElement);
+
+    listElement.addEventListener("drop", )
 }
+
